@@ -1,11 +1,15 @@
 {
-  "name": "falling-cubes-tut",
+  "name": "TryingOut",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
+    "clean": "rm -rf ./dist",
     "start": "parcel index.html",
-    "host": "parcel index.html; browser http://localhost:1234",
+    "serve": "parcel serve index.html",
+    "watch": "parcel watch index.html",
+    "build": "NODE_ENV=production parcel build index.html --no-scope-hoist --public-url '.' ",
+    "build-local": "NODE_ENV=production parcel build index.html --no-scope-hoist --public-url '.' --dist-dir 'public' ",
+    "serve-local": "http-server -a 0.0.0.0 -U --log-ip --no-dotfiles --cors node --trace-deprecation -c-1 public/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
